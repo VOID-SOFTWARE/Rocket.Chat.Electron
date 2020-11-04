@@ -36,7 +36,7 @@ import { dispatch, listen } from '../../store';
 import {
   LOADING_ERROR_VIEW_RELOAD_SERVER_CLICKED,
   SIDE_BAR_CONTEXT_MENU_TRIGGERED,
-  SIDE_BAR_REMOVE_SERVER_CLICKED,
+  // SIDE_BAR_REMOVE_SERVER_CLICKED,
   WEBVIEW_ATTACHED,
   WEBVIEW_DETACHED,
   WEBVIEW_DID_FAIL_LOAD,
@@ -408,12 +408,12 @@ export const attachGuestWebContentsEvents = async (): Promise<void> => {
           guestWebContents.loadURL(serverUrl);
         },
       },
-      {
-        label: t('sidebar.item.remove'),
-        click: () => {
-          dispatch({ type: SIDE_BAR_REMOVE_SERVER_CLICKED, payload: serverUrl });
-        },
-      },
+      // {
+      //   label: t('sidebar.item.remove'),
+      //   click: () => {
+      //     dispatch({ type: SIDE_BAR_REMOVE_SERVER_CLICKED, payload: serverUrl });
+      //   },
+      // },
       { type: 'separator' },
       {
         label: t('sidebar.item.openDevTools'),

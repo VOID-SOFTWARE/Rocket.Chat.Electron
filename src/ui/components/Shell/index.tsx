@@ -7,7 +7,7 @@ import { AddServerView } from '../AddServerView';
 import { ScreenSharingDialog } from '../ScreenSharingDialog';
 import { SelectClientCertificateDialog } from '../SelectClientCertificateDialog';
 import { ServersView } from '../ServersView';
-import { SideBar } from '../SideBar';
+// import { SideBar } from '../SideBar';
 import { UpdateDialog } from '../UpdateDialog';
 import { GlobalStyles, Wrapper, WindowDragBar, ViewsWrapper } from './styles';
 
@@ -33,7 +33,7 @@ export const Shell: FC = () => {
     <GlobalStyles />
     {process.platform === 'darwin' && <WindowDragBar />}
     <Wrapper>
-      <SideBar />
+      {/* <SideBar /> */}
       <ViewsWrapper>
         <ServersView />
         <AddServerView />

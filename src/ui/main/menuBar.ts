@@ -71,23 +71,23 @@ const createAppMenu = createSelector(
         },
         { type: 'separator' },
       ]),
-      ...on(process.platform !== 'darwin', () => [
-        {
-          id: 'addNewServer',
-          label: t('menus.addNewServer'),
-          accelerator: 'CommandOrControl+N',
-          click: async () => {
-            const browserWindow = await getRootWindow();
+      // ...on(process.platform !== 'darwin', () => [
+      //   {
+      //     id: 'addNewServer',
+      //     label: t('menus.addNewServer'),
+      //     accelerator: 'CommandOrControl+N',
+      //     click: async () => {
+      //       const browserWindow = await getRootWindow();
 
-            if (!browserWindow.isVisible()) {
-              browserWindow.showInactive();
-            }
-            browserWindow.focus();
-            dispatch({ type: MENU_BAR_ADD_NEW_SERVER_CLICKED });
-          },
-        },
-        { type: 'separator' },
-      ]),
+      //       if (!browserWindow.isVisible()) {
+      //         browserWindow.showInactive();
+      //       }
+      //       browserWindow.focus();
+      //       dispatch({ type: MENU_BAR_ADD_NEW_SERVER_CLICKED });
+      //     },
+      //   },
+      //   { type: 'separator' },
+      // ]),
       {
         id: 'disableGpu',
         label: t('menus.disableGpu'),

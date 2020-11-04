@@ -1,7 +1,7 @@
 import { parse as parseUrl } from 'url';
 
 import React, { useMemo, FC, DragEvent, MouseEvent } from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
 
@@ -10,11 +10,11 @@ import { RootState } from '../../../store/rootReducer';
 import {
   SIDE_BAR_SERVER_SELECTED,
   SIDE_BAR_CONTEXT_MENU_TRIGGERED,
-  SIDE_BAR_ADD_NEW_SERVER_CLICKED,
+  // SIDE_BAR_ADD_NEW_SERVER_CLICKED,
 } from '../../actions';
 import {
-  AddServerButton,
-  AddServerButtonLabel,
+  // AddServerButton,
+  // AddServerButtonLabel,
   Avatar,
   Badge,
   Content,
@@ -129,13 +129,13 @@ export const SideBar: FC = () => {
     handleDrop,
   } = useSorting(servers);
 
-  const dispatch = useDispatch<Dispatch<RootAction>>();
+  // const dispatch = useDispatch<Dispatch<RootAction>>();
 
-  const handleAddServerButtonClicked = (): void => {
-    dispatch({ type: SIDE_BAR_ADD_NEW_SERVER_CLICKED });
-  };
+  // const handleAddServerButtonClicked = (): void => {
+  //   dispatch({ type: SIDE_BAR_ADD_NEW_SERVER_CLICKED });
+  // };
 
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return <Wrapper background={background} color={color} isVisible={isVisible}>
     <Content withWindowButtons={process.platform === 'darwin'}>
@@ -159,12 +159,12 @@ export const SideBar: FC = () => {
           onDrop={handleDrop(server.url)}
         />)}
       </ServerList>
-      <AddServerButton>
+      {/* <AddServerButton>
         <AddServerButtonLabel
           tooltip={t('sidebar.addNewServer')}
           onClick={handleAddServerButtonClicked}
         >+</AddServerButtonLabel>
-      </AddServerButton>
+      </AddServerButton> */}
     </Content>
   </Wrapper>;
 };
