@@ -1,5 +1,9 @@
 # Void Chat Electron
 
+`yarn build` seguido de `yarn release --publish never` gera o intalador, na pasta `dist`, para o sistema operativo onde corre.
+
+Em linux instalar com `sudo apt install ./void-chat_1.0.0_amd64.deb`.
+
 [Urls encontrados](httpCalls.md)
 
 # Rocket.Chat Desktop App

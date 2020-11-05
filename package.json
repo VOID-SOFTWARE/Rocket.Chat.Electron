@@ -1,30 +1,30 @@
 {
-  "name": "rocketchat",
-  "description": "Official OSX, Windows, and Linux Desktop Clients for Rocket.Chat",
-  "version": "3.1.0-snapshot",
-  "author": "Rocket.Chat Support <support@rocket.chat>",
-  "copyright": "© 2016-2020, Rocket.Chat",
-  "homepage": "https://rocket.chat",
+  "name": "void-chat",
+  "description": "Official OSX, Windows, and Linux Desktop Clients for Void Chat",
+  "version": "1.0.0",
+  "author": "Pedro Ferreira <pedro.ferreira@voidsoftware.com>",
+  "copyright": "2020, Void Software",
+  "homepage": "https://void.pt",
   "license": "MIT",
   "keywords": [
-    "rocketchat",
+    "void-chat",
     "desktop",
     "electron"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RocketChat/Rocket.Chat.Electron.git"
+    "url": "git+https://github.com/VOID-SOFTWARE/Rocket.Chat.Electron.git"
   },
   "bugs": {
-    "url": "https://github.com/RocketChat/Rocket.Chat.Electron/issues"
+    "url": "https://github.com/VOID-SOFTWARE/Rocket.Chat.Electron/issues"
   },
   "main": "app/main.js",
   "scripts": {
     "postinstall": "run-s install-app-deps clean",
     "start": "run-s clean build:watch",
     "clean": "rimraf app dist",
-    "build": "rollup -c",
-    "release": "yarn electron-builder --publish onTagOrDraft --x64",
+    "build": "NODE_ENV=production rollup -c",
+    "release": "NODE_ENV=production yarn electron-builder --publish onTagOrDraft --x64",
     "build:watch": "rollup -c -w",
     "install-app-deps": "electron-builder install-app-deps",
     "test": "xvfb-maybe jest",
@@ -85,7 +85,7 @@
     "@typescript-eslint/parser": "^4.2.0",
     "babel-eslint": "^10.1.0",
     "builtin-modules": "^3.1.0",
-    "chokidar": "^3.4.2",
+    "chokidar": "^3.4.3",
     "conventional-changelog-cli": "^2.1.0",
     "convert-svg-to-png": "^0.5.0",
     "electron": "^10.0.1",
@@ -111,5 +111,5 @@
     "node": ">=12.8.x",
     "yarn": ">=1.22.x"
   },
-  "productName": "Rocket.Chat"
+  "productName": "Void Chat"
 }

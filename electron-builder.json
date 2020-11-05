@@ -7,7 +7,7 @@
     "build/icon.ico",
     "servers.json"
   ],
-  "appId": "chat.rocket",
+  "appId": "chat.void",
   "mac": {
     "category": "public.app-category.productivity",
     "target": [
@@ -18,9 +18,9 @@
     ],
     "icon": "build/icon.icns",
     "bundleVersion": "78",
-    "helperBundleId": "chat.rocket.electron.helper",
+    "helperBundleId": "chat.void.electron.helper",
     "type": "distribution",
-    "artifactName": "rocketchat-${version}.${ext}",
+    "artifactName": "void-chat-${version}.${ext}",
     "extendInfo": {
       "NSMicrophoneUsageDescription": "I need access to your microphone to record the audio you want to send.",
       "NSCameraUsageDescription": "I need access to your camera to record the video you want to send."
@@ -56,7 +56,7 @@
     "asarUnpack": [
       "node_modules"
     ],
-    "artifactName": "rocketchat-${version}-mas.${ext}"
+    "artifactName": "void-chat-${version}-mas.${ext}"
   },
   "win": {
     "target": [
@@ -83,7 +83,7 @@
     "uninstallDisplayName": "${productName} ${version}",
     "include": "build/installer.nsh",
     "license": "LICENSE",
-    "artifactName": "rocketchat-setup-${version}.${ext}",
+    "artifactName": "void-chat-setup-${version}.${ext}",
     "deleteAppDataOnUninstall": false,
     "displayLanguageSelector": false,
     "unicode": true,
@@ -94,18 +94,18 @@
     "menuCategory": false
   },
   "msi": {
-    "artifactName": "rocketchat-setup-${version}.${ext}"
+    "artifactName": "void-chat-setup-${version}.${ext}"
   },
   "appx": {
     "backgroundColor": "#2f343d",
-    "displayName": "Rocket.Chat",
-    "publisherDisplayName": "Rocket.Chat",
+    "displayName": "Void Chat",
+    "publisherDisplayName": "Void Chat",
     "languages": [
       "en-US",
       "en-GB",
       "pt-BR"
     ],
-    "artifactName": "rocketchat-${version}-${arch}.${ext}"
+    "artifactName": "void-chat-${version}-${arch}.${ext}"
   },
   "linux": {
     "target": [
@@ -114,22 +114,22 @@
       "rpm",
       "snap"
     ],
-    "executableName": "rocketchat-desktop",
+    "executableName": "void-chat",
     "category": "GNOME;GTK;Network;InstantMessaging",
     "desktop": {
-      "StartupWMClass": "Rocket.Chat",
-      "MimeType": "x-scheme-handler/rocketchat"
+      "StartupWMClass": "Void Chat",
+      "MimeType": "x-scheme-handler/void-chat"
     },
-    "artifactName": "rocketchat-${version}.${ext}"
+    "artifactName": "void-chat-${version}.${ext}"
   },
   "deb": {
-    "artifactName": "rocketchat_${version}_${arch}.${ext}"
+    "artifactName": "void-chat_${version}_${arch}.${ext}"
   },
   "rpm": {
-    "artifactName": "rocketchat-${version}.${arch}.${ext}"
+    "artifactName": "void-chat-${version}.${arch}.${ext}"
   },
   "snap": {
-    "artifactName": "rocketchat_${version}_${arch}.${ext}",
+    "artifactName": "void-chat_${version}_${arch}.${ext}",
     "plugs": [
       "desktop",
       "desktop-legacy",
@@ -154,7 +154,7 @@
     {
       "provider": "github",
       "owner": "RocketChat",
-      "repo": "Rocket.Chat.Electron",
+      "repo": "Void Chat.Electron",
       "vPrefixedTagName": false
     }
   ]
